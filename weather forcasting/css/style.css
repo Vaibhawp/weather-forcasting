@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(5, 8, 114, 1),
+    rgba(7, 3, 53, 1)
+  );
+  color: #defaf9;
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 22px;
+}
+
+.weather {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.weather_search {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 20px;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.weather_today {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather_image {
+  width: 210px;
+  align-self: center;
+}
+
+.weather_city {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.weather_day {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+/* ::before is pseudo class which means without disturbing the para graph will control the selected element
+propery contents whatever we want to show without disturbing element */
+.weather_indicator::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 10px;
+}
+/*  */
+.weather_indicator--humidity::before {
+  background-image: url(../images/humidity.png);
+}
+
+.weather_indicator--wind::before {
+  background-image: url(../images/wind.png);
+}
+
+.weather_indicator--pressure::before {
+  background-image: url(../images/pressure.png);
+}
+
+.weather_temperature {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.weather_forecast {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+/* display  flex is used to make our element center . and should must be added to parent container.*/
+.weather_forecast_icon {
+  max-width: 50%;
+}
+
+.weather_forecast_item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 0 10px 10px;
+  padding: 30px 5px 20px;
+  width: 300px;
+}
